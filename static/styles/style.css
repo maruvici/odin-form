@@ -1,3 +1,11 @@
+@font-face {
+  font-family: 'Norse';
+  src: url('../assets/fonts/Norse.otf') format('opentype');
+  font-weight: normal;
+  font-style: normal;
+  font-display: swap;
+}
+
 *,
 *::before,
 *::after {
@@ -7,4 +15,138 @@
 * {
     margin: 0;
     padding: 0;
+}
+
+:root {
+    --bg-image: url(../assets/img/valhallaDay.png);
+    --main-bg-color: #F9F7F7;
+    --em-bg-color: #ffffff;
+    --text-color: black;
+    --em-text-color: #927d1d;
+    --button-bg-color: #2e3440;
+}
+
+.dark-mode {
+    --bg-image: url(../assets/img/valhallaNight.png);
+    --main-bg-color: #2e3440;
+    --em-bg-color: #3b4252;
+    --text-color: white;
+    --em-text-color: #6d97ce;
+    --button-bg-color: #F9F7F7;
+}
+
+body {
+    display: flex;
+}
+
+.left-container,
+.right-container {
+    display: flex;
+    flex-direction: column;
+    min-height: 100vh;
+}
+
+.left-container {
+    background-image: var(--bg-image);
+    background-position: center;
+    background-size: cover;
+    flex: 1 0 0;
+}
+
+.right-container {
+    flex: 3 0 0;
+}
+
+.right-container .top {
+    background-color: var(--main-bg-color);
+    color: var(--text-color);
+    display: flex;
+    flex: 1 0 0;
+    flex-direction: column;
+    justify-content: flex-end;
+    padding: 20px;
+}
+
+.right-container .top .title, 
+legend {
+    color: var(--em-text-color);
+    font-family: 'Norse', serif;
+    font-weight: 700;
+}
+
+.right-container .top .title {
+    font-size: 3.5em;
+}
+
+.right-container .mid {
+    background-color: var(--em-bg-color);
+    color: var(--text-color);
+    display: flex;
+    flex: 2 0 0;
+    padding: 20px;
+}
+
+.right-container .mid form {
+    display: flex;
+    flex: 1 0 0;
+    flex-direction: column;
+    gap: 20px;
+    justify-content: space-evenly;
+}
+
+.right-container .mid .inputContainer {
+    display: flex;
+    gap: 10px;
+    width: 100%;
+}
+
+.right-container .mid .input {
+    display: flex;
+    flex-direction: column;
+    flex-grow: 1;
+    font-size: medium;
+    font-style: italic;
+}
+
+.right-container .bot {
+    background-color: var(--main-bg-color);
+    color: var(--em-text-color);
+    flex: 1 0 0;
+    padding: 20px;
+}
+
+.right-container .bot #registerButton {
+    background-color: var(--em-text-color);
+    border: none;
+    border-radius: 10px;
+    color: var(--main-bg-color);
+    font-family: 'Norse', 'system-ui';
+    font-size: x-large;
+    font-weight: bold;
+    padding: 5px 20px;
+}
+
+.right-container .bot .loginText {
+    color: var(--text-color);
+    font-size: small;
+    margin-top: 10px;
+}
+
+#toggleButton {
+    position: fixed;
+    bottom: 20px;
+    right: 20px;
+    padding: 12px 18px;
+    background-color: var(--em-bg-color);
+    color: var(--em-text-color);
+    border: none;
+    border-radius: 100%;
+    font-size: 14px;
+    cursor: pointer;
+    box-shadow: 0 6px 20px rgba(0, 0, 0, 0.2);
+} 
+
+#toggleButton:hover {
+    background-color: var(--button-bg-color);
+    color: var(--main-bg-color);
 }
