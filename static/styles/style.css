@@ -108,6 +108,25 @@ legend {
     font-style: italic;
 }
 
+.right-container .mid .input input {
+    padding: 3px;
+}
+
+.right-container .mid .input select {
+    padding: 5px;
+}
+
+.right-container .mid .input input:user-invalid,
+.right-container .mid .input select:user-invalid {
+    border: 2px solid red
+}
+
+.right-container .mid .input input:user-valid,
+.right-container .mid .input select:user-valid {
+    border: 2px solid green
+}
+
+
 .right-container .bot {
     background-color: var(--main-bg-color);
     color: var(--em-text-color);
