@@ -53,6 +53,27 @@ body {
     flex: 1 0 0;
 }
 
+.left-container .logo-container {
+    align-items: center;
+    background-color: rgba(0, 0, 0, 0.6);
+    display: flex;
+    flex-direction: column;
+    margin-top: 100px;
+    padding: 10px;
+}
+
+.left-container .logo-container img {
+    max-width: 20%;
+    height: auto;
+}
+
+.left-container .logo-container .logo-text {
+    color: white;
+    font-family: 'Norse', 'system-ui';
+    font-size: 30px;
+    font-weight: 700;
+}
+
 .right-container {
     flex: 3 0 0;
 }
@@ -108,6 +129,12 @@ legend {
     font-style: italic;
 }
 
+.right-container .mid .input input,
+.right-container .mid .input select {
+    border: 1px solid black;
+    border-radius: 5px;
+}
+
 .right-container .mid .input input {
     padding: 3px;
 }
@@ -125,7 +152,6 @@ legend {
 .right-container .mid .input select:user-valid {
     border: 2px solid green
 }
-
 
 .right-container .bot {
     background-color: var(--main-bg-color);
